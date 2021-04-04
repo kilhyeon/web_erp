@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,10 +20,17 @@ ${list }
 			<tr>
 				<td>${emp.empNo }</td>
 				<td><a href="EmpGetServlet?empNo=${emp.empNo}">${emp.empName }</a></td>				
-				<td>${emp.title.name }</td>				
-				<td>${emp.manager.empName }</td>				
-				<td>${emp.salary }</td>				
-				<td>${emp.dept.deptName }</td>				
+				<td>${emp.title.name }(${emp.title.no })</td>				
+				<td>
+					<c:if test="${emp.manager.empNo eq 0 }">
+						없음
+					</c:if>
+					<c:if test="${emp.manager.empNo ne 0 }">
+						${emp.manager.empName }(${emp.manager.empNo })
+					</c:if>
+				</td>				
+				<td><fmt:formatNumber value="${emp.salary }" pattern="#,###"/></td>
+				<td>${emp.dept.deptName }(${emp.dept.deptNo })</td>				
 			</tr>
 		</c:forEach>		
 		</tbody>
