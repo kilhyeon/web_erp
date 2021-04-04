@@ -24,6 +24,7 @@
 					<li>
 						<a href="TitleDelServlet?no=${title.no }">삭제</a>
 						<a href="titleUpdate.jsp?no=${title.no }&name=${title.name }">수정</a>
+						<a onclick="history.back(-1)" style="cursor:pointer;">취소</a>
 					</li>
 				</ul>
 			</fieldset>

@@ -25,6 +25,7 @@
 					<li>
 						<input type="submit" value="수정">
 						<input type="reset" value="취소">
+						<input type="button" value="취소" onclick="history.back(-1)">
 					</li>
 				</ul>
 		</fieldset>

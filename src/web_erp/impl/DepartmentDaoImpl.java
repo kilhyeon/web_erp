@@ -21,6 +21,10 @@ public class DepartmentDaoImpl implements DepartmentDao {
 
 	private DepartmentDaoImpl() {
 	}
+	
+	public void setCon(Connection con) {
+		this.con = con;
+	}
 
 	@Override
 	public List<Department> selectDepartmentByAll() {

@@ -24,6 +24,7 @@ ${list }
 		</tbody>
 			<tfoot>
 				<tr><td colspan="2"><a href="titleInput.jsp">직책 추가</a></td></tr>
+				<tr><td colspan="2"><a href="index.jsp">메인 화면</a></td></tr>
 			</tfoot>
 	</table>
 </body>

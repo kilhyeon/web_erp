@@ -1,7 +1,6 @@
 package web_erp.servlet;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,16 +8,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import web_erp.dto.Title;
-import web_erp.service.TitleService;
+import web_erp.service.DeptService;
 
-@WebServlet("/TitleListServlet")
-public class TitleListServlet extends HttpServlet {
+@WebServlet("/DeptDelServlet")
+public class DeptDelServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private TitleService service;
+	private DeptService service;
 
-	public TitleListServlet() {
-		service = new TitleService();
+	public DeptDelServlet() {
+		service = new  DeptService();
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -26,13 +24,11 @@ public class TitleListServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html;charset=UTF-8");
 
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		int deptNo = Integer.parseInt(request.getParameter("deptNo").trim());
 
-		List<Title> list = service.showTitles();
-//		list.stream().forEach(System.out::println);
+		service.removeDept(deptNo);
 
-		request.setAttribute("list", list);
-		request.getRequestDispatcher("titleList.jsp").forward(request, response);
+		response.sendRedirect("DeptListServlet");
 
 	}
 

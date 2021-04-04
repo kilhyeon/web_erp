@@ -26,6 +26,10 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
 	private EmployeeDaoImpl() {
 	}
+	
+	public void setCon(Connection con) {
+		this.con = con;
+	}
 
 	@Override
 	public List<Employee> selectEmployeeByAll() {

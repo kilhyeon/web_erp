@@ -4,22 +4,26 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>직책 추가</title>
+<title>부서 추가</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<h2>직책 정보 입력</h2>
-		<form action="TitleInsertServlet" method="get">
+	<h2>부서 정보 입력</h2>
+		<form action="DeptInsertServlet" method="get">
 			<fieldset>
-				<legend>직책 정보</legend>
+				<legend>부서 정보</legend>
 				<ul>
 					<li>
-						<label for="tno">직책번호</label>
-						<input type="number" name="tno" size="20" id="tno" autofocus required>
+						<label for="deptNo">부서번호</label>
+						<input type="number" name="deptNo" size="20" id="deptNo" autofocus required>
 					</li>
 					<li>
-						<label for="tname">직책명</label>
-						<input type="text" name="tname" size="20" id="tname">
+						<label for="deptName">부서명</label>
+						<input type="text" name="deptName" size="20" id="deptName">
+					</li>
+					<li>
+						<label for="floor">위치</label>
+						<input type="number" name="floor" size="20" id="floor">
 					</li>
 					<li>
 						<input type="submit" value="추가">

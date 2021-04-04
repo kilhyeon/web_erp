@@ -9,16 +9,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import web_erp.dto.Title;
-import web_erp.service.TitleService;
+import web_erp.dto.Department;
+import web_erp.service.DeptService;
 
-@WebServlet("/TitleListServlet")
-public class TitleListServlet extends HttpServlet {
+@WebServlet("/DeptListServlet")
+public class DeptListServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private TitleService service;
+	private DeptService service;
 
-	public TitleListServlet() {
-		service = new TitleService();
+	public DeptListServlet() {
+		service = new DeptService();
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -28,11 +28,11 @@ public class TitleListServlet extends HttpServlet {
 
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 
-		List<Title> list = service.showTitles();
+		List<Department> list = service.showDepts();
 //		list.stream().forEach(System.out::println);
 
 		request.setAttribute("list", list);
-		request.getRequestDispatcher("titleList.jsp").forward(request, response);
+		request.getRequestDispatcher("deptList.jsp").forward(request, response);
 
 	}
 
