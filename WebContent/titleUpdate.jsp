@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,11 +8,11 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-${list }
-		<h2>직책 정보 수정</h2>
-		<form action="TitleUpdateServlet" method="get">
-			<fieldset>
-				<legend>직책 정보</legend>
+	${list }
+	<h2>직책 정보 수정</h2>
+	<form action="TitleUpdateServlet" method="get">
+		<fieldset>
+			<legend>직책 정보</legend>
 				<ul>
 					<li>
 						<label for="tno">직책번호</label>
@@ -27,7 +27,7 @@ ${list }
 						<input type="reset" value="취소">
 					</li>
 				</ul>
-			</fieldset>
-		</form>
+		</fieldset>
+	</form>
 </body>
 </html>
