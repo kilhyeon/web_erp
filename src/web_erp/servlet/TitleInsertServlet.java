@@ -27,7 +27,7 @@ public class TitleInsertServlet extends HttpServlet {
 		String name = request.getParameter("tname");
 		
 		Title title = new Title(no, name);
-		System.out.println(title);
+//		System.out.println(title);
 		
 		service.addTitle(title);
 		

@@ -24,7 +24,7 @@ public class TitleUpdateServlet extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");
 		
 		int no = Integer.parseInt(request.getParameter("tno").trim());
-		String name = request.getParameter("tname");
+		String name = request.getParameter("tname").trim();
 		
 		Title title = new Title(no, name);
 		System.out.println(title);
@@ -32,7 +32,6 @@ public class TitleUpdateServlet extends HttpServlet {
 		service.modifyTitle(title);
 		
 		response.sendRedirect("TitleListServlet");
-//		request.getRequestDispatcher("TitleListServlet").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

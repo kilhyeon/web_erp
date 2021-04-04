@@ -16,11 +16,11 @@ ${list }
 				<ul>
 					<li>
 						<label for="tno">직책번호</label>
-						<input type="number" name="tno" size="20" id="tno" value="${title.no }">
+						<input type="number" name="tno" size="20" id="tno" value="${param.no }" readonly="readonly">
 					</li>
 					<li>
 						<label for="tname">직책명</label>
-						<input type="text" name="tname" size="20" id="tname" value="${title.name }" autofocus required>
+						<input type="text" name="tname" size="20" id="tname" value="${param.name }" autofocus required>
 					</li>
 					<li>
 						<input type="submit" value="수정">

@@ -23,7 +23,7 @@
 					</li>
 					<li>
 						<a href="TitleDelServlet?no=${title.no }">삭제</a>
-						<a href="TitleUpdate.jsp?no=${title.no }&name=${title.name }">수정</a>
+						<a href="titleUpdate.jsp?no=${title.no }&name=${title.name }">수정</a>
 					</li>
 				</ul>
 			</fieldset>

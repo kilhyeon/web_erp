@@ -26,7 +26,7 @@ public class TitleGetServlet extends HttpServlet {
 
 		int no = Integer.parseInt(request.getParameter("titleNo").trim());
 		Title title = service.showTitle(new Title(no));
-		System.out.println(title);
+//		System.out.println(title);
 
 		request.setAttribute("title", title);
 		request.getRequestDispatcher("titleInfo.jsp").forward(request, response);
